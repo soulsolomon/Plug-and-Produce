@@ -27,8 +27,8 @@ class Basic1Workbench (Workbench):
 
     """
 
-    MenuText = "Plug&Play"
-    ToolTip = "Basic 1 workbench"
+    MenuText = "Plug&Produce"
+    ToolTip = "Plug&Produce workbench"
 
     def Initialize(self) :
         "This function is executed when FreeCAD starts"
@@ -36,11 +36,11 @@ class Basic1Workbench (Workbench):
         # python file where the commands are:
         import Basic1Gui
         # list of commands, only one (it is in the imported Basic1Gui):
-        cmdlist = [ "Basic1_MakeBox"]
+        cmdlist = [ "Basic1_MakeBox","Basic2_MakeBoxDialog","ScrewCMD","HoleCMD"]
         self.appendToolbar(
-            str(QtCore.QT_TRANSLATE_NOOP("Plug&Play", "Plug&Play")), cmdlist)
+            str(QtCore.QT_TRANSLATE_NOOP("Plug&Produce", "Plug&Produce")), cmdlist)
         self.appendMenu(
-            str(QtCore.QT_TRANSLATE_NOOP("Plug&Play", "Plug&Play")), cmdlist)
+            str(QtCore.QT_TRANSLATE_NOOP("Plug&Produce", "Plug&Produce")), cmdlist)
 
         Log ('Loading Basic1 module... done\n')
 
