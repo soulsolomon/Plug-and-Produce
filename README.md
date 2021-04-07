@@ -2,7 +2,7 @@
 
 ![plot](./mdimages/githubbanner.png)
 
-Project description goes here
+This is a workbench for FreeCAD that implements a set of adon tools that allows a proper defination of Holes, Nails, Screws and Pick&Place processes in a plug and produce workflow. Process defination including variable names for positions and properties can be stored in a data file (J-SON). 
 
 ## Getting Started
 
