@@ -36,7 +36,7 @@ class Basic1Workbench (Workbench):
         # python file where the commands are:
         import Basic1Gui
         # list of commands, only one (it is in the imported Basic1Gui):
-        cmdlist = [ "Basic1_MakeBox","Basic2_MakeBoxDialog","ScrewCMD","HoleCMD"]
+        cmdlist = [ "Basic1_MakeBox","Basic2_MakeBoxDialog","ScrewCMD","HoleCMD","JsonCmd"]
         self.appendToolbar(
             str(QtCore.QT_TRANSLATE_NOOP("Plug&Produce", "Plug&Produce")), cmdlist)
         self.appendMenu(
