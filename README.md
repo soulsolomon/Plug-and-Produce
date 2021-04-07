@@ -1,4 +1,6 @@
 # Plug and produce FreeCAD Addons Repository
+
+![plot](./directory_1/directory_2/.../directory_n/plot.png)
 :freecad:
 Project description goes here
 
