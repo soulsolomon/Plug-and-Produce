@@ -113,6 +113,36 @@ class _MakeHole:
 #Adding the HoleCMDoleCmd to toolbar
 FreeCADGui.addCommand('HoleCMD', _MakeHole())
 
+# Class command for json 
+# GUI command that links the Python script
+class _MakeJson:
+    """Command to create a box"""
+    
+    def Activated(self):
+        # what is done when the command is clicked
+        MakeBox()
+
+    def GetResources(self):
+        # icon and command information
+        MenuText = QtCore.QT_TRANSLATE_NOOP(
+            'Basic1_Box',
+            'Box')
+        ToolTip = QtCore.QT_TRANSLATE_NOOP(
+            'Basic1_Box',
+            'Generate Json')
+        return {
+            'Pixmap': __dir__ + '/icons/json.svg',
+            'MenuText': MenuText,
+            'ToolTip': ToolTip}
+
+    def IsActive(self):
+        # The command will be active if there is an active document
+        return not FreeCAD.ActiveDocument is None
+
+
+#Adding the JsonCMD to toolbar
+FreeCADGui.addCommand('JsonCmd', _MakeJson())
+
 
 
 
