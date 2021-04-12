@@ -1,4 +1,4 @@
-class Basic1Workbench (Workbench):
+class PlugandProduceWorkbench (Workbench):
     """Basic 1 workbench object"""
     # this is the icon in XPM format 16x16 pixels
     Icon = """
@@ -34,7 +34,7 @@ class Basic1Workbench (Workbench):
         "This function is executed when FreeCAD starts"
         from PySide import QtCore, QtGui
         # python file where the commands are:
-        import Basic1Gui
+        import FirstModuleGui
         # list of commands, only one (it is in the imported Basic1Gui):
         cmdlist = [ "Basic1_MakeBox","Basic2_MakeBoxDialog","ScrewCMD","HoleCMD","JsonCmd"]
         self.appendToolbar(
@@ -48,4 +48,4 @@ class Basic1Workbench (Workbench):
         return "Gui::PythonWorkbench"
 
 # The workbench is added:
-Gui.addWorkbench(Basic1Workbench())
+Gui.addWorkbench(PlugandProduceWorkbench())
