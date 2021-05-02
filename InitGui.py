@@ -4,34 +4,31 @@ class Basic1Workbench (Workbench):
     Icon = """
    /* XPM */
     static char * basic1_xpm[] = {
-    "16 16 5 1",
-    " 	c None",
-    ".	c #FFFFFF",
-    "+	c #000000",
-    "@	c #7F4F00",
-    "#	c #FFBF00",
-    "................",
-    "...++++++++++++.",
-    "..+@#########++.",
-    ".+@#########+@+.",
-    ".+++++++++++@#+.",
-    ".+#########+##+.",
-    ".+###++####+##+.",
-    ".+####+####+##+.",
-    ".+####+####+##+.",
-    ".+####+####+##+.",
-    ".+####+####+##+.",
-    ".+####+####+##+.",
-    ".+###+++###+#@+.",
-    ".+#########+@+..",
-    ".++++++++++++...",
-    "................"};
+    "16 16 2 1",
+" 	c None",
+".	c #000000",
+"     ..  ..     ",
+"     ..  ..     ",
+"     ..  ..     ",
+"     ..  ..     ",
+"    .      .    ",
+"    ........    ",
+"    .      .    ",
+"    .      .    ",
+"    .      .    ",
+"     .    .     ",
+"      ....      ",
+"       .        ",
+"      .         ",
+"     .          ",
+"                ",
+"                "};
 
 
     """
 
-    MenuText = "Plug&Play"
-    ToolTip = "Basic 1 workbench"
+    MenuText = "Plug&Produce"
+    ToolTip = "Plug&Produce workbench"
 
     def Initialize(self) :
         "This function is executed when FreeCAD starts"
@@ -39,11 +36,11 @@ class Basic1Workbench (Workbench):
         # python file where the commands are:
         import Basic1Gui
         # list of commands, only one (it is in the imported Basic1Gui):
-        cmdlist = [ "Basic1_MakeBox"]
+        cmdlist = [ "Basic1_MakeBox","Basic2_MakeBoxDialog","ScrewCMD","HoleCMD","JsonCmd"]
         self.appendToolbar(
-            str(QtCore.QT_TRANSLATE_NOOP("Plug&Play", "Plug&Play")), cmdlist)
+            str(QtCore.QT_TRANSLATE_NOOP("Plug&Produce", "Plug&Produce")), cmdlist)
         self.appendMenu(
-            str(QtCore.QT_TRANSLATE_NOOP("Plug&Play", "Plug&Play")), cmdlist)
+            str(QtCore.QT_TRANSLATE_NOOP("Plug&Produce", "Plug&Produce")), cmdlist)
 
         Log ('Loading Basic1 module... done\n')
 

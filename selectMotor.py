@@ -6,11 +6,16 @@ import nail, drillingOperation, screwing, pickPlace, makedrill
 import getAngles
 import os
         
+<<<<<<< HEAD
 def giveInform(CadObjectName):
+=======
+def giveInform():
+>>>>>>> 79125638d7ca73af625c600826076d018d2805d1
     # local address of getting the freeCAD drawing
     FreeCAD.openDocument('C:/Users/Mashiur/Desktop/ThesisCAD/TreeCell.FCStd')
     # Name of the drawing and respective drawing from the tree view,
     # Tree view name can be seen by simply clicking this drawing
+<<<<<<< HEAD
     #FreeCADGui.Selection.addSelection('TreeCell','b_motor_001_')
     FreeCADGui.Selection.addSelection('TreeCell',CadObjectName)
     sel = FreeCADGui.Selection.getSelection()
@@ -18,6 +23,13 @@ def giveInform(CadObjectName):
     placeMotor = sel[0].Placement.Base
     FreeCAD.Console.PrintMessage("/n")
     FreeCAD.Console.PrintMessage(sel[0].Placement.Base)
+=======
+    FreeCADGui.Selection.addSelection('TreeCell','b_motor_001_')
+    sel = FreeCADGui.Selection.getSelection()
+    # returns a array of three coordinates of positions
+    placeMotor = sel[0].Placement.Base
+    #FreeCAD.Console.PrintMessage(sel[0].Placement.Base)
+>>>>>>> 79125638d7ca73af625c600826076d018d2805d1
     a = placeMotor[0]
     b = placeMotor[1]
     c = placeMotor[2]
@@ -44,7 +56,11 @@ def giveInform(CadObjectName):
     rx = rollPitchYaw[0]
     ry = rollPitchYaw[1]
     rz = rollPitchYaw[2]
+<<<<<<< HEAD
     
     return [a,b,c,rx,ry,rz]
     #return "Pos ["+str(a)+" "+ str(b)+ " " + str(c) + "]"+ " " +"Rot [" + str(rx) + " " + str(ry) + " " + str(rz) +"]"
+=======
+    return "Pos ["+str(a)+" "+ str(b)+ " " + str(c) + "]"+ " " +"Rot [" + str(rx) + " " + str(ry) + " " + str(rz) +"]"
+>>>>>>> 79125638d7ca73af625c600826076d018d2805d1
         
