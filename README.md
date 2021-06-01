@@ -1,4 +1,4 @@
-# Plug and produce FreeCAD Addons 
+# Plug and produce FreeCAD Addons (Under Dev)
 
 ![plot](./mdimages/githubbanner.png)
 
